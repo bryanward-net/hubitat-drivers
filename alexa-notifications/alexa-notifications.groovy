@@ -12,13 +12,6 @@
  *  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License
  *  for the specific language governing permissions and limitations under the License.
  *  
- *  This driver allows you to setup a notification device for use with the NotifyMe Alexa Skill (http://www.thomptronics.com/notify-me).
- *  1. Go to the Alexa Skills Store (or ask Alexa ) to enable the Notify Me skill.
- *  2. After you enable the Notify Me skill, you'll get an email with your access code.
- *  3. In Hubitat, create a new virtual device with a type of Alexa Notifications Driver.
- *  4. In the driver settings, set your access code.
- *  5. Use like other notifications drivers.
-
  *  Change History:
  *
  *    Date        Who             	What
