@@ -1,8 +1,9 @@
 /**
- *  Alexa Notifications Driver
- *  https://raw.githubusercontent.com/code-in-progress/hubitat-drivers/master/alexa-notifications/alexa-notifications.groovy
- *
+ *  Alexa VirtualButtons Driver
+ *  Forked From: https://raw.githubusercontent.com/code-in-progress/hubitat-drivers/master/alexa-notifications/alexa-notifications.groovy
  *  Copyright 2019 CoreRootedXB
+ 
+ *  https://github.com/bryanward-net/hubitat-drivers/blob/master/alexa-virtualbuttons/alexa-virtualbuttons.groovy
  *  Copyright 2021 Bryan Ward
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
@@ -19,7 +20,7 @@
  *    Date        Who             	What
  *    ----        ---             	----
  *    2019-03-25  CoreRootedXB   	Original Creation
- *    2021-07-29  Bryan Ward        Modified for VirtualButtons
+ *    2021-07-29  Bryan Ward            Modified for VirtualButtons
  * 
  */
 
