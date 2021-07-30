@@ -3,6 +3,7 @@
  *  https://raw.githubusercontent.com/code-in-progress/hubitat-drivers/master/alexa-notifications/alexa-notifications.groovy
  *
  *  Copyright 2019 CoreRootedXB
+ *  Copyright 2021 Bryan Ward
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  *  in compliance with the License. You may obtain a copy of the License at:
@@ -18,17 +19,18 @@
  *    Date        Who             	What
  *    ----        ---             	----
  *    2019-03-25  CoreRootedXB   	Original Creation
+ *    2021-07-29  Bryan Ward        Modified for VirtualButtons
  * 
  */
 
 metadata {
-    definition (name: "Alexa Notifications Driver", namespace: "corerootedxb", author: "CoreRootedXB") {
+    definition (name: "Alexa VirtualButtons Driver", namespace: "corerootedxb", author: "CoreRootedXB") {
         capability "Notification"
     }
 }
 
 preferences {
-    input name: "accessCode", type: "string", title: "Access Code", description: "Visit Notify-Me before using this", required: true
+    input name: "accessCode", type: "string", title: "Access Code", description: "Visit VirtualButtons before using this", required: true
 	input name: "logEnable", type: "bool", title: "Enable debug logging", defaultValue: true
 }
 
@@ -56,9 +58,9 @@ def deviceNotification(String msg) {
 	if (logEnable) log.debug "sending message: $msg"
 	
 	def params = [
-    	uri: "https://api.notifymyecho.com/v1/NotifyMe",
+    	uri: "https://api.virtualbuttons.com/v1",
     	body: [
-        	notification: "$msg",
+        	virtualButton: Integer.valueOf(msg),
 			accessCode: "$accessCode"
     	]
 	]
